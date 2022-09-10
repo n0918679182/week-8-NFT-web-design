@@ -1,10 +1,91 @@
----
-title: Boostrap Index
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html lang="en">
 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boostrap Index</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Squada+One&display=swap" rel="stylesheet"> 
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- my css -->
+    <link rel="stylesheet" href="./assets/style/all.css">
+  </head>
+
+  <body class="position-relative">
+    <div class="w-100 h-100 bg-opacity-65 position-absolute top-0 start-0 bg-cover d-lg-none" id="bg-cover"></div>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-0 fixed-top w-100 border-bottom">
+      <div class="container position-relative">
+
+        <!-- logo -->
+        <a class="navbar-brand logo py-0" href="#"><img class="img-fluid h-100 my-4" src="assets/images/logo.svg" alt="ART NFT LOGO"></a>
+
+        <!-- icon -->
+        <div class="d-flex d-lg-none">
+          <div class="me-6" role="button" id="search-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <button class="border-0 burger-btn" id="burger-btn" type="button" >
+            <i class="fa-solid fa-bars fs-5" id="burger-icon"></i>
+          </button>
+        </div>
+
+        <!-- 選單按鈕 -->
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item border-lg-start py-lg-10 px-lg-12">
+              <form class="d-none d-lg-flex align-items-lg-center">
+                <input class="form-control border-0 bg-light text-dark me-6" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+                <button class="border-0 bg-light"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </form>
+            </li>
+            <li class="nav-item border-lg-start">
+              <a class="nav-link active fw-bold h-100 d-flex align-items-center px-lg-12" aria-current="page" href="#">探索</a>
+            </li>
+            <li class="nav-item border-lg-start">
+              <a class="nav-link active fw-bold h-100 d-flex align-items-center py-lg-10 px-lg-12" aria-current="page" href="#">市值</a>
+            </li>
+            <li class="nav-item border-lg-start">
+              <a class="nav-link active fw-bold h-100 d-flex align-items-center py-lg-10 ps-lg-12" aria-current="page" href="#"><i class="fa-solid fa-wallet"></i></a>
+            </li>
+          </ul>
+          
+        </div>
+
+        <!-- mobile 搜尋區塊 -->
+        <div class="search-section w-100 h-100 bg-light d-lg-none align-items-center px-3" id="search-section" role="button">
+          <i class="fa-solid fa-angle-left" id="search-close"></i>
+          <input class="form-control border-0 bg-light text-dark me-6 w-100" type="search" placeholder="搜尋作品名稱、藝術家名稱" aria-label="Search">
+          <button class="border-0 bg-light"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        
+      </div>
+
+      <!-- mobile 選單 -->
+      <ul class="menu-item w-100 bg-white d-lg-none align-items-center px-3 list-unstyled" id="menu-item">
+        <div class="container">
+          <li class="border-bottom">
+            <a class="fs-5 fw-bold d-flex justify-content-center py-6" href="#">探索</a>
+          </li>
+          <li class="">
+            <a class="fs-5 fw-bold d-flex justify-content-center py-6" href="#">市值</a>
+          </li>
+          <li class="mb-6">
+            <a href="#" class="btn btn-main bg-primary w-100 py-3">連結錢包</a>
+          </li>
+        </div>
+      </ul>
+
+    </nav>
+
+    
 <!-- banner -->
 <div class="container mt-to-nav pt-lg-10 px-0 mb-10 mb-lg-18">
 
@@ -525,3 +606,26 @@ current: index
 </div>
 
 
+
+
+    <footer class="border-top pt-2 w-100">
+      <div class="border-top border-4 py-6 text-center">
+        <p class="mb-0" style="font-family: Noto Sans TC;">© ART NFT. All Rights Reserved</p>
+      </div>
+    </footer>
+
+    
+    <script src="./assets/js/vendors.js"></script>
+    <!-- jquery -->
+    <script src="./assets/js/jquery-3.6.1.min.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- Masonry -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <!-- imagesLoaded -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <!-- my js -->
+    <script src="./assets/js/all.js"></script>
+  </body>
+
+</html>
