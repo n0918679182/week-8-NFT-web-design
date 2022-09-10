@@ -1,0 +1,54 @@
+.artwork {
+    &-image, &-cover {
+        border: 8px solid #fff;
+        @include md {
+            border: 12px solid #fff;
+        }
+        @include xl {
+            border: 18px solid #fff;
+        }
+        @include xxl {
+            border: 24px solid #fff;
+        }
+    }
+    &-image {
+        @include lg {
+            min-height: 230px;
+        }
+    }
+    .h-327 {
+        @include lg {
+            height: 327px;
+        }
+    }
+    .h-254 {
+        @include lg {
+            height: 254px;
+        }
+    }
+    &-cover {
+        opacity: 0;
+        @include lg {
+            background: rgba(0, 0, 0, 0.65);
+            transition: .3s;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    &-title {
+        h3 {
+            font-size: 14px;
+        }
+        @include lg {
+            border-bottom: 1px solid #000;
+            h3 {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+
+

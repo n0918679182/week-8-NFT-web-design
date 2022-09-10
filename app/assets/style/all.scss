@@ -1,0 +1,16 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "./helpers/variables";
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+@import 'mixin.scss';
+@import 'base.scss';
+@import 'components.scss';
+
+@import './layout/navbar.scss';
+
+@import 'index/banner';
+@import 'index/ranking';
+@import 'index/artist';
+@import 'index/artwork';
+@import 'index/joinus';
+
