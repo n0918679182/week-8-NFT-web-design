@@ -20,6 +20,12 @@
   }
 }
 
+.menu-hover {
+  &:hover {
+    transform: scale(1.1);
+  }  
+}
+
 .burger-btn {
   width: 24px;
   background: transparent;  

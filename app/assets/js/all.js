@@ -44,6 +44,10 @@ $(document).ready(function () {
     $('.artwork').masonry(); // 渲染整體畫面
   });
 
+  $('.artist-collect').imagesLoaded().progress( function() {
+    $('.artist-collect').masonry(); // 渲染整體畫面
+  });
+
 
 
 });
