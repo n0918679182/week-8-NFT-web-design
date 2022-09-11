@@ -37,6 +37,9 @@ $(document).ready(function () {
   $('.artwork').imagesLoaded().progress(function () {
     $('.artwork').masonry(); // 渲染整體畫面
   });
+  $('.artist-collect').imagesLoaded().progress(function () {
+    $('.artist-collect').masonry(); // 渲染整體畫面
+  });
 }); // 熱門藝術家 swiper
 
 var swiper = new Swiper(".artistSwiper", {
